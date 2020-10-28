@@ -1,5 +1,6 @@
 const express = require("express");
 const app = express();
+const { port } = require("./assets/assets.json")
 
 app.get("/", (req, res) => {
     res.json({
@@ -10,6 +11,4 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(3000, () => {
-    console.log("hello world");
-});
+app.listen(port);

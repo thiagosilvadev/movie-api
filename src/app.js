@@ -1,13 +1,10 @@
 const express = require("express");
 const app = express();
-const { port } = require("./assets/assets.json")
+const { port } = require("./assets/assets.json");
 
-app.get("/", (req, res) => {
-    res.json({
-        "message": "olá, mundo"
-    })
-})
+const router = require("./routes")
 
+app.use(router);
 
 
 
